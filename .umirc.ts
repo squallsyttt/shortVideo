@@ -1,13 +1,16 @@
 import { defineConfig } from '@umijs/max';
 
 export default defineConfig({
-  antd: {},
+  antd: {
+    // dark: true,
+    compact: true,
+  },
   access: {},
   model: {},
   initialState: {},
   request: {},
   layout: {
-    title: '@umijs/max',
+    title: '@ShortVideo/rank',
   },
   routes: [
     {
@@ -29,7 +32,11 @@ export default defineConfig({
       path: '/table',
       component: './Table',
     },
+    {
+      name: '个人中心',
+      path: '/user',
+      component: './User',
+    },
   ],
   npmClient: 'pnpm',
 });
-
